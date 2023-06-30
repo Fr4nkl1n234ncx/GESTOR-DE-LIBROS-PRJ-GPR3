@@ -1,21 +1,30 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <thread>
-#include <cstring>
-#include <limits>
-#include "../libD/nmColor.h"
+
 using namespace std;
 
+// Clase Libro
 class Libro {
 public:
     Libro(int codigo, string titulo, string autor, int anioPublicacion)
         : codigo(codigo), titulo(titulo), autor(autor), anioPublicacion(anioPublicacion) {}
 
-    int getCodigo() const { return codigo; }
-    string getTitulo() const { return titulo; }
-    string getAutor() const { return autor; }
-    int getAnioPublicacion() const { return anioPublicacion; }
+    int getCodigo() const {
+        return codigo;
+    }
+
+    string getTitulo() const {
+        return titulo;
+    }
+
+    string getAutor() const {
+        return autor;
+    }
+
+    int getAnioPublicacion() const {
+        return anioPublicacion;
+    }
 
 private:
     int codigo;
@@ -24,6 +33,7 @@ private:
     int anioPublicacion;
 };
 
+// Clase GestorLibros
 class GestorLibros {
 public:
     void agregarLibro(int codigo, string titulo, string autor, int anioPublicacion) {
@@ -31,31 +41,19 @@ public:
         libros.push_back(libro);
     }
 
-    void printAnimatedText(const char* color, const char* text) {
-        for (size_t i = 0; i < strlen(text); ++i) {
-            printf("%s%c%s", color, text[i], RESET);
-            this_thread::sleep_for(chrono::milliseconds(50));
-        }
-        cout << "\n";
-    }
-
-    bool buscarLibroPorCodigo(int codigo) {
+    void buscarLibroPorCodigo(int codigo) {
         auto it = find_if(libros.begin(), libros.end(), [codigo](const Libro& libro) {
             return libro.getCodigo() == codigo;
         });
 
         if (it != libros.end()) {
-            printAnimatedText(GREEN, "========================");
-            printAnimatedText(GREEN, "Libro encontrado:");
-            printAnimatedText(RED, "Codigo: "); printAnimatedText(CYAN, to_string(it->getCodigo()).c_str());
-            printAnimatedText(RED, "Titulo: "); printAnimatedText(CYAN, it->getTitulo().c_str());
-            printAnimatedText(RED, "Autor: "); printAnimatedText(CYAN, it->getAutor().c_str());
-            printAnimatedText(RED, "A\xA4o de publicacion: "); printAnimatedText(CYAN, to_string(it->getAnioPublicacion()).c_str());
-            printAnimatedText(GREEN, "========================");
-            return true;
+            cout << "Libro encontrado:" << endl;
+            cout << "Codigo: " << it->getCodigo() << endl;
+            cout << "Titulo: " << it->getTitulo() << endl;
+            cout << "Autor: " << it->getAutor() << endl;
+            cout << "Ano de publicacion: " << it->getAnioPublicacion() << endl;
         } else {
-            printAnimatedText(RED, "Libro no encontrado.");
-            return false;
+            cout << "Libro no encontrado." << endl;
         }
     }
 
@@ -63,35 +61,20 @@ private:
     vector<Libro> libros;
 };
 
+// Función principal
 int main() {
     GestorLibros gestor;
 
+    // Agregar algunos libros de ejemplo
     gestor.agregarLibro(1001, "El Gran Gatsby", "F. Scott Fitzgerald", 1925);
     gestor.agregarLibro(1002, "1984", "George Orwell", 1949);
     gestor.agregarLibro(1003, "Don Quijote de la Mancha", "Miguel de Cervantes", 1605);
 
-    while (true) {
-        int codigoBusqueda;
-        gestor.printAnimatedText(YELLOW, "Ingrese el codigo del libro a buscar: ");
-        cin >> codigoBusqueda;
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');  // Ignora todos los caracteres hasta el próximo carácter de nueva línea
-
-        if (gestor.buscarLibroPorCodigo(codigoBusqueda)) {
-            string opcionLinea;
-            gestor.printAnimatedText(YELLOW, "Desea buscar otro libro? (s/n): ");
-            getline(cin, opcionLinea);
-
-            if (opcionLinea.empty() || (opcionLinea[0] != 's' && opcionLinea[0] != 'S')) {
-                break;
-            }
-        }
-
-        #ifdef _WIN32
-            system("cls");
-        #else
-            system("clear");
-        #endif
-    }
+    // Buscar un libro por código
+    int codigoBusqueda;
+    cout << "Ingrese el codigo del libro a buscar: ";
+    cin >> codigoBusqueda;
+    gestor.buscarLibroPorCodigo(codigoBusqueda);
 
     return 0;
 }
