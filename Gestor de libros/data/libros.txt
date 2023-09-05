@@ -1,0 +1,22 @@
+ ID;autor;nombre;fecha;editorial;descripcion;
+203;Rowling;Harry Potter y la P. Filosofal;1997;Bloomsbury Publishing;La emocionante historia del joven mago Harry Potter y su entrada al mundo de la magia
+304;Harper Lee;Matar un ruisenor;1960;J. B. Lippincott & Co.;Un relato conmovedor sobre la injusticia racial en el sur de Estados Unidos
+405;Scott Fitzgerald;El Gran Gatsby;1925;Scribner;Una novela que explora la decadencia y los suenos rotos en la alta sociedad de la decada de 1920
+506;Jane Austen;Orgullo y prejuicio;1813;T. Egerton;Una historia de amor y clase social en la Inglaterra del siglo XIX
+607;Suzanne Collins;Los juegos del hambre;2010;Scholastic;Una historia de supervivencia en un mundo distopico donde los jovenes son obligados a luchar por sus vidas.
+708;Lewis Carroll;Alicia en el pais de las maravillas;1865;Macmillan;Un viaje surrealista al pais de las maravillas lleno de personajes extravagantes y situaciones absurdas.
+809;Dan Brown;El Codigo Da Vinci;2003;Doubleday;Una trepidante busqueda de misterios religiosos y artisticos a traves de las calles de Paris.
+910;Emily Bronte;Cumbres Borrascosas;1847;Thomas Cautley Newby;Una historia apasionada de amor y venganza en los sombrios paramos de Yorkshire.
+1011;William Golding;El senor de las moscas;1954;Faber And Faber;La lucha por la supervivencia y la civilizacion en una isla desierta, explorando la naturaleza humana.
+1112;John Steinbeck;Las uvas de la ira;1939;The Viking Press;La odisea de una familia durante la Gran Depresion en Estados Unidos.
+1213;Kazuo Ishiguro;Nunca me abandones;2005;Faber And Faber;Una reflexion sobre la identidad y la humanidad en un mundo donde la vida tiene un proposito especifico.
+1314;Fyodor Dostoevsky;Crimen y castigo;1869;The Russian Messenger;Un estudiante comete un asesinato y se debate entre la culpa y la justificacion en la Rusia del siglo XIX.
+1415;Stephen King;El resplandor;1974;Doubleday;Un escritor acepta un trabajo como cuidador de un hotel aislado, donde los horrores sobrenaturales acechan.
+1516;Arundhati Roy;El dios de las pequenas cosas;1998;Indiaink;Una saga familiar en la India que explora el amor, la discriminacion y el destino.
+1617;Mario Puzo;El padrino;1969;G.P. Putnams Sons;La historia de la poderosa familia mafiosa Corleone en Nueva York.
+1718;Ray Bradbury;Fahrenheit 451;1953;Ballantine Books;En un mundo donde los libros estan prohibidos, un bombero se convierte en un rebelde defensor de la literatura.
+1819;Khaled Hosseini;Mil soles esplendidos;2008;Riverhead Books;La vida de dos mujeres a lo largo de decadas tumultuosas en Afganistan.
+1920;James Joyce;Ulises;1922;Sylvia Beach;Una obra maestra de la literatura modernista que sigue a Leopold Bloom en un dia en Dublin.
+201;Jane Doe;El misterio perdido;2005;Libros Raros;Una intrigante novela de misterio que sigue la busqueda de un tesoro perdido.
+202;John Smith;Aventuras submarinas;2005;Ediciones Marinas;Un emocionante relato de aventuras submarinas en busca de tesoros hundidos.
+203;Alice Johnson;Secretos en la isla;2005;Editorial Misterio;Una historia de misterio y secretos oscuros en una isla remota.
